@@ -29,6 +29,12 @@ namespace RedisViewer
         private void LoadConnections()
         {
             var connections = Settings.GetConnections();
+            if (!connections.Any() || connections.Count == 1 && connections.Count(x => x.Key == "Name") == 1)
+            {
+                MessageBox.Show("Please add your Redis connections to the app.config file before you start the application", "No connections", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Application.Exit();
+                Close();
+            }
 
             grpDatabases.Controls.Clear();
             foreach (var connection in connections)
