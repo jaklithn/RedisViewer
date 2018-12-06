@@ -1,0 +1,8 @@
+﻿<SyntaxModes version="1.0">
+  <Mode file       = "JavaScript-Mode.xshd"
+        name       = "JavaScript"
+        extensions = ".js"/>
+  <Mode file       = "Json-Mode.xshd"
+        name       = "Json"
+        extensions = ".json"/>
+</SyntaxModes>
